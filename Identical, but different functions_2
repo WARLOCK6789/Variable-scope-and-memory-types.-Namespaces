@@ -1,0 +1,52 @@
+#include <iostream>
+#include <Windows.h>
+
+namespace Math1 
+{
+    int calc(int x, int y) 
+    {
+        return x + y;
+    }
+}
+
+namespace Math2 
+{
+    int calc(int x, int y) 
+    {
+        return x - y;
+    }
+}
+
+namespace Math3 
+{
+    int calc(int x, int y) 
+    {
+        return x * y;
+    }
+}
+
+namespace Math4 
+{
+    int calc(int x, int y) 
+    {
+        if (y != 0) 
+        {
+            return x / y;
+        } 
+    }
+}
+
+int main() 
+{
+    SetConsoleCP(1251);
+    SetConsoleOutputCP(1251);
+    int x = 6, y = 9;
+
+    std::cout << "x = " << x << ", y = " << y << std::endl;
+    std::cout << "Сложение: " << Math1::calc(x, y) << std::endl;
+    std::cout << "Вычитание: " << Math2::calc(x, y) << std::endl;
+    std::cout << "Умножение: " << Math3::calc(x, y) << std::endl;
+    std::cout << "Деление: " << Math4::calc(x, y) << std::endl;
+
+    return EXIT_SUCCESS;
+}
